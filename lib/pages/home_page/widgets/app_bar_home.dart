@@ -5,9 +5,7 @@ import 'poke_item.dart';
 import 'poke_item.dart';
 
 class AppBarHome extends StatelessWidget {
-  Widget _buildCategories(BuildContext context) {
-    PokeItem();
-  }
+  Widget _buildCategories(BuildContext context) {}
 
   @override
   Widget build(BuildContext context) {
