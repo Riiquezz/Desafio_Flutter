@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_pokeapi/pages/home_page/widgets/search_bar.dart';
 
+import 'package:dio/dio.dart';
+
 import 'poke_item.dart';
 import 'poke_item.dart';
 
 class AppBarHome extends StatelessWidget {
-  Widget _buildCategories(BuildContext context) {}
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,10 +18,6 @@ class AppBarHome extends StatelessWidget {
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.only(top: 13, right: 5),
-                  child: IconButton(
-                    icon: Icon(Icons.menu),
-                    onPressed: () {},
-                  ),
                 )
               ],
             ),
@@ -39,26 +35,6 @@ class AppBarHome extends StatelessWidget {
                       fontSize: 28),
                 ),
               ),
-            ],
-          ),
-          Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 28),
-                child: Text(
-                  'What Pokemon\nare you looking for?',
-                  style: TextStyle(
-                    fontSize: 30,
-                    height: 10,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-              ),
-              SearchBar(),
-              _buildCategories(context),
             ],
           ),
         ],
